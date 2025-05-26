@@ -6,7 +6,7 @@ app = Flask(__name__)
 metrics = PrometheusMetrics(app)  # Enables /metrics endpoint
 
 # Use relative path for CI compatibility
-UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
+UPLOAD_FOLDER = '/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 HTML = '''

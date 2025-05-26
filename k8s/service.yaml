@@ -7,6 +7,6 @@ spec:
     app: secure-upload-server
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 5000
-  type: ClusterIP
+      port: 5000        # Expose port 5000 in service
+      targetPort: 5000  # Forward to container port 5000
+  type: ClusterIP      # Default type, no NodePort
